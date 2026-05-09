@@ -13,5 +13,6 @@ return {
   },
   after = function()
     require("oil").setup()
+    print("Oil setup complete")
   end,
 }

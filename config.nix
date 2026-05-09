@@ -8,7 +8,6 @@
 
   initLua = ''
     require('codevogel')
-    require('lz.n').load('codevogel.lazy')
   '';
 
   plugins = {
