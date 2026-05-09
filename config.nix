@@ -11,10 +11,13 @@
   '';
 
   extraBinPath = with pkgs; [
+    # Tools
     ripgrep
 
+    # LSP
     lua-language-server
 
+    # Formatters
     stylua
     nixfmt
     prettier
