@@ -10,6 +10,10 @@
     require('codevogel')
   '';
 
+  extraBinPath = with pkgs; [
+    lua-language-server
+  ];
+
   plugins = {
 
     start =
@@ -24,6 +28,7 @@
       with pkgs.vimPlugins;
       [
         oil-nvim
+        nvim-lspconfig
         which-key-nvim
         mini-icons
         nvim-web-devicons
