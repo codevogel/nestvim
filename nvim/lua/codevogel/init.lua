@@ -1,4 +1,2 @@
-vim.keymap.set("n", " ", "<Nop>", { silent = true, remap = false })
-vim.g.mapleader = " "
-
-require("lz.n").load("plugins.lazy")
+require("codevogel.config")
+require("lz.n").load("codevogel.plugins.lazy")
