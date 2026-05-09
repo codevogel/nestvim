@@ -32,6 +32,7 @@
       [
         lz-n
         kanagawa-nvim
+        plenary-nvim
       ]
       ++ [ ];
 
@@ -52,6 +53,10 @@
         lualine-nvim
       ]
       ++ [ ];
+
+    optAttrs = {
+      "harpoon" = pkgs.vimPlugins.harpoon2;
+    };
 
     dev.codevogel = {
       pure = ./nvim;
