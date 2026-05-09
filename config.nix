@@ -48,6 +48,7 @@
         luasnip
         conform-nvim
         fidget-nvim
+        gitsigns-nvim
       ]
       ++ [ ];
 
