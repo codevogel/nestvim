@@ -16,6 +16,7 @@
       with pkgs.vimPlugins;
       [
         lz-n
+        kanagawa-nvim
       ]
       ++ [ ];
 
