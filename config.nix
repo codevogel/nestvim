@@ -47,6 +47,7 @@
         blink-cmp
         luasnip
         conform-nvim
+        fidget-nvim
       ]
       ++ [ ];
 
