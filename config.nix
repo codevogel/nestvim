@@ -24,6 +24,9 @@
       with pkgs.vimPlugins;
       [
         oil-nvim
+        which-key-nvim
+        mini-icons
+        nvim-web-devicons
       ]
       ++ [ ];
 
