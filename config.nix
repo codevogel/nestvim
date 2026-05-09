@@ -34,6 +34,7 @@
         which-key-nvim
         mini-icons
         nvim-web-devicons
+        snacks-nvim
       ]
       ++ [ ];
 
