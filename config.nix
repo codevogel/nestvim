@@ -35,6 +35,8 @@
         mini-icons
         nvim-web-devicons
         snacks-nvim
+        blink-cmp
+        luasnip
       ]
       ++ [ ];
 
