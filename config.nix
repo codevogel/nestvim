@@ -11,6 +11,8 @@
   '';
 
   extraBinPath = with pkgs; [
+    ripgrep
+
     lua-language-server
   ];
 
