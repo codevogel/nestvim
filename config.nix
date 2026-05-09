@@ -17,6 +17,12 @@
       with pkgs.vimPlugins;
       [
         lz-n
+      ]
+      ++ [ ];
+
+    opt =
+      with pkgs.vimPlugins;
+      [
         oil-nvim
       ]
       ++ [ ];
