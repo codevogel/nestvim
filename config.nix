@@ -14,6 +14,12 @@
     ripgrep
 
     lua-language-server
+
+    stylua
+    nixfmt
+    prettier
+    prettierd
+    csharpier
   ];
 
   plugins = {
@@ -37,6 +43,7 @@
         snacks-nvim
         blink-cmp
         luasnip
+        conform-nvim
       ]
       ++ [ ];
 
