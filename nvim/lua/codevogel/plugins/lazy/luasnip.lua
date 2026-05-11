@@ -6,6 +6,7 @@ return {
   after = function()
     local snippet_paths = vim.api.nvim_get_runtime_file("lua/codevogel/snippets", true)
     require("luasnip.loaders.from_lua").lazy_load({ paths = snippet_paths })
+    require("luasnip.loaders.from_vscode").lazy_load()
   end,
 
   keymap.set({ "i", "s" }, "<C-h>", function()

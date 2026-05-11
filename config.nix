@@ -34,6 +34,7 @@
         lz-n
         kanagawa-nvim
         plenary-nvim
+        friendly-snippets
       ]
       ++ [ ];
 
