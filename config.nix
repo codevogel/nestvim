@@ -72,6 +72,10 @@
         nvim-lint
         roslyn-nvim
         {
+          pname = "todo-comments";
+          src = todo-comments-nvim;
+        }
+        {
           pname = "lint";
           src = nvim-lint;
         }
