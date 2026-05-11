@@ -13,6 +13,7 @@
   extraBinPath = with pkgs; [
     # Tools
     ripgrep
+    fzf
     nodejs
 
     # LSP
