@@ -13,6 +13,7 @@
   extraBinPath = with pkgs; [
     # Tools
     ripgrep
+    nodejs
 
     # LSP
     lua-language-server
@@ -51,6 +52,7 @@
         fidget-nvim
         gitsigns-nvim
         lualine-nvim
+        copilot-vim
       ]
       ++ [ ];
 
