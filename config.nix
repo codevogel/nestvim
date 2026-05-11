@@ -18,6 +18,11 @@
     # LSP
     lua-language-server
 
+    # Linters
+    eslint
+    eslint_d
+    markdownlint-cli2
+
     # Formatters
     stylua
     nixfmt
@@ -54,6 +59,11 @@
         gitsigns-nvim
         lualine-nvim
         copilot-vim
+        {
+          pname = "lint";
+          src = nvim-lint;
+        }
+        roslyn-nvim
         {
           pname = "colorizer";
           src = nvim-colorizer-lua;
