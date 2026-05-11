@@ -25,6 +25,13 @@ return {
           },
         },
       },
+      bashls = {},
+      nixd = {},
+      gdscript = {},
+      gdshader_lsp = {},
+      tsserver = {},
+      eslint = {},
+      cssls = {},
     }
 
     for server_name, cfg in pairs(servers) do

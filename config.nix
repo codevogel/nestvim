@@ -17,7 +17,11 @@
     nodejs
 
     # LSP
+    nixd
+    bash-language-server
     lua-language-server
+    roslyn-ls
+    vscode-langservers-extracted
 
     # Linters
     eslint
@@ -30,6 +34,11 @@
     prettier
     prettierd
     csharpier
+
+    # More than one function
+    beautysh
+    shellcheck
+    gdtoolkit_4
   ];
 
   plugins = {
@@ -60,6 +69,7 @@
         gitsigns-nvim
         lualine-nvim
         copilot-vim
+        nvim-lint
         {
           pname = "lint";
           src = nvim-lint;
