@@ -70,11 +70,15 @@
         lualine-nvim
         copilot-vim
         nvim-lint
+        roslyn-nvim
         {
           pname = "lint";
           src = nvim-lint;
         }
-        roslyn-nvim
+        {
+          pname = "roslyn";
+          src = roslyn-nvim;
+        }
         {
           pname = "colorizer";
           src = nvim-colorizer-lua;
