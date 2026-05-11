@@ -4,12 +4,16 @@
 }:
 
 {
+  # The package we use for neovim, which is nightly in my case.
   neovim = inputs.neovim-nightly-overlay.packages.${pkgs.stdenv.hostPlatform.system}.default;
 
+  # This will be passed to mnw as the entry point for the config.
+  # It delegates to our lua config in `nvim/lua/codevogel/init.lua`
   initLua = ''
     require('codevogel')
   '';
 
+  # Any binaries we may need to run our config, that aren't vim plugins.
   extraBinPath = with pkgs; [
     # Tools
     ripgrep
@@ -41,8 +45,10 @@
     gdtoolkit_4
   ];
 
+  # Packages for our vim plugins.
   plugins = {
 
+    # Non-lazy plugins by list
     start =
       with pkgs.vimPlugins;
       [
@@ -53,6 +59,8 @@
       ]
       ++ [ ];
 
+    # Lazy plugins by list
+    # These are intended to be loaded by `lz.n`
     opt =
       with pkgs.vimPlugins;
       [
@@ -69,26 +77,9 @@
         gitsigns-nvim
         lualine-nvim
         copilot-vim
-        nvim-lint
-        roslyn-nvim
-        {
-          pname = "todo-comments";
-          src = todo-comments-nvim;
-        }
-        {
-          pname = "lint";
-          src = nvim-lint;
-        }
-        {
-          pname = "roslyn";
-          src = roslyn-nvim;
-        }
-        {
-          pname = "colorizer";
-          src = nvim-colorizer-lua;
-        }
       ]
       ++ [
+        # Pinned from git because it's not in nixpkgs
         {
           pname = "harpoon-lualine";
           src = pkgs.fetchFromGitHub {
@@ -100,10 +91,16 @@
         }
       ];
 
+    # Lazy plugins by attribute set (some plugins may require renaming)
     optAttrs = {
       "harpoon" = pkgs.vimPlugins.harpoon2;
+      "todo-comments" = pkgs.vimPlugins.todo-comments-nvim;
+      "lint" = pkgs.vimPlugins.nvim-lint;
+      "roslyn" = pkgs.vimPlugins.roslyn-nvim;
+      "colorizer" = pkgs.vimPlugins.nvim-colorizer-lua;
     };
 
+    # Finally, here we define our devMode.
     dev.codevogel = {
       pure = ./nvim;
       impure = "/home/$(whoami)/nestvim/nvim";

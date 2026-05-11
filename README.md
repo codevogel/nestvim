@@ -99,3 +99,5 @@ And import that into your `configuration.nix`, say in `~/yournixos/hosts/my-host
 
 Now you can run `nvim`, or alternatively,
 `nix run ~/yournixos#nestvim` or `nix run ~/yournixos#dev`
+
+You can then update your config by `nix flake update nestvim` to update just the `nestvim` input.
