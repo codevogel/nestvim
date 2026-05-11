@@ -54,7 +54,10 @@
         gitsigns-nvim
         lualine-nvim
         copilot-vim
-
+        {
+          pname = "colorizer";
+          src = nvim-colorizer-lua;
+        }
       ]
       ++ [
         {
