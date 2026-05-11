@@ -54,8 +54,19 @@
         gitsigns-nvim
         lualine-nvim
         copilot-vim
+
       ]
-      ++ [ ];
+      ++ [
+        {
+          pname = "harpoon-lualine";
+          src = pkgs.fetchFromGitHub {
+            owner = "letieu";
+            repo = "harpoon-lualine";
+            rev = "215c0847dfb787b19268f7b42eed83bdcf06b966";
+            sha256 = "sha256-HGbz/b2AVl8145BCy8I47dDrhBVMSQQIr+mWbOrmj5Q=";
+          };
+        }
+      ];
 
     optAttrs = {
       "harpoon" = pkgs.vimPlugins.harpoon2;
