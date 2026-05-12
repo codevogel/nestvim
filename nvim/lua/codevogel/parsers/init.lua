@@ -1,0 +1,1 @@
+require("codevogel.parsers.gdscript")
