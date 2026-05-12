@@ -35,6 +35,7 @@
       # This is where we point to our actual mnw config in a separate file.
       config = import ./config.nix {
         inherit pkgs inputs;
+        lib = pkgs.lib;
       };
     in
     {

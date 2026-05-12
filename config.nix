@@ -1,6 +1,7 @@
 {
   pkgs,
   inputs,
+  lib,
 }:
 
 {
@@ -57,7 +58,23 @@
         plenary-nvim
         friendly-snippets
       ]
-      ++ [ ];
+      ++ [
+        # Since nvim-treesitter is archived we manage the parsers ourselves.
+        # The grammarToPlugin will build the parser and make it available as a plugin.
+        # Queries have to be managed manually.
+
+        # Pin gdscript parser from github as the nixos-unstable doesn't have it
+        (pkgs.neovimUtils.grammarToPlugin pkgs.tree-sitter.buildGrammar {
+          language = "gdscript";
+          version = "d2a0ee9";
+          src = pkgs.fetchFromGitHub {
+            owner = "PrestonKnopp";
+            repo = "tree-sitter-gdscript";
+            rev = "d2a0ee914d297b873a40dd4596bd1f7157ebc52b";
+            sha256 = "sha256-QT28TQBt20lMScfF4zb2RJhlPFNekjocOWbvQ2a2yuM=";
+          };
+        })
+      ];
 
     # Lazy plugins by list
     # These are intended to be loaded by `lz.n`
