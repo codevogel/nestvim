@@ -216,3 +216,7 @@
 (
   (identifier) @constant
   (#match? @constant "^[A-Z][A-Z\\d_]+$"))
+
+; CUSTOM: mark void as a keyword
+((identifier) @keyword
+  (#eq? @keyword "void"))
