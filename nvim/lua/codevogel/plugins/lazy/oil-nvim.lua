@@ -1,5 +1,6 @@
 return {
   "oil.nvim",
+  cmd = "Oil",
   keys = {
     { "<leader>oo", "<cmd>Oil<cr>", desc = "Open Oil" },
     { "<leader>oc", "<cmd>Oil .<cr>", desc = "Open Oil in CWD" },
@@ -13,6 +14,5 @@ return {
   },
   after = function()
     require("oil").setup()
-    print("Oil setup complete")
   end,
 }
