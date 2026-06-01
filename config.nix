@@ -124,5 +124,13 @@
       pure = ./nvim;
       impure = "/home/$(whoami)/nestvim/nvim";
     };
+
+    dev."swiftpick.nvim" = {
+      pure = pkgs.vimUtils.buildVimPlugin {
+        name = "swiftpick.nvim";
+        src = /home/codevogel/work/neovim/swiftpick.nvim;
+      };
+      impure = "/home/codevogel/work/neovim/swiftpick.nvim";
+    };
   };
 }

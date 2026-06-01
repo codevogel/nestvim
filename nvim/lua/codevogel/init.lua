@@ -16,3 +16,12 @@ vim.api.nvim_create_autocmd("VimEnter", {
     end
   end,
 })
+
+require("swiftpick2").setup({})
+
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>h",
+  ':lua require("swiftpick2").picker.open_picker()<CR>',
+  { desc = "Open SwiftPick2" }
+)
