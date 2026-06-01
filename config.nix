@@ -108,6 +108,15 @@
             sha256 = "sha256-HGbz/b2AVl8145BCy8I47dDrhBVMSQQIr+mWbOrmj5Q=";
           };
         }
+        {
+          pname = "swiftpick";
+          src = pkgs.fetchFromGitHub {
+            owner = "codevogel";
+            repo = "swiftpick.nvim";
+            rev = "main";
+            sha256 = "sha256-NRpY2I3Xn1TmFlqyU8vCwJL81SUVjQxvRXMem6cdxBE=";
+          };
+        }
       ];
 
     # Lazy plugins by attribute set (some plugins may require renaming)
