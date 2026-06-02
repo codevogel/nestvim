@@ -96,6 +96,7 @@
         gitsigns-nvim
         lualine-nvim
         copilot-vim
+        lazydev-nvim
       ]
       ++ [
         # Pinned from git because it's not in nixpkgs
