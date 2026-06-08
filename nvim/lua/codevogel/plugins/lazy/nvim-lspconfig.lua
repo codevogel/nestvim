@@ -14,10 +14,6 @@ return {
               globals = { "vim" },
             },
             workspace = {
-              library = {
-                vim.env.VIMRUNTIME,
-                unpack(vim.api.nvim_get_runtime_file("", true)),
-              },
               checkThirdParty = false,
             },
             hint = { enable = true },
