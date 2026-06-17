@@ -101,15 +101,6 @@
       ++ [
         # Pinned from git because it's not in nixpkgs
         {
-          pname = "harpoon-lualine";
-          src = pkgs.fetchFromGitHub {
-            owner = "letieu";
-            repo = "harpoon-lualine";
-            rev = "215c0847dfb787b19268f7b42eed83bdcf06b966";
-            sha256 = "sha256-HGbz/b2AVl8145BCy8I47dDrhBVMSQQIr+mWbOrmj5Q=";
-          };
-        }
-        {
           pname = "swiftpick";
           src = pkgs.fetchFromGitHub {
             owner = "codevogel";
@@ -122,7 +113,6 @@
 
     # Lazy plugins by attribute set (some plugins may require renaming)
     optAttrs = {
-      "harpoon" = pkgs.vimPlugins.harpoon2;
       "todo-comments" = pkgs.vimPlugins.todo-comments-nvim;
       "lint" = pkgs.vimPlugins.nvim-lint;
       "roslyn" = pkgs.vimPlugins.roslyn-nvim;
