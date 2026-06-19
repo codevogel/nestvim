@@ -105,8 +105,8 @@
           src = pkgs.fetchFromGitHub {
             owner = "codevogel";
             repo = "swiftpick.nvim";
-            rev = "b0cb23d53551de157e7841538722f3b4e48bdc69";
-            sha256 = "sha256-q6+AMv+gDz7c+D7meciE/b1KG+CaY4crR9+WLgOokVI=";
+            rev = "main";
+            sha256 = "sha256-/L9/VdZ/Rn0ys/YSs6fL3vvqG5OjkZwJeAlC2fgl5Ms=";
           };
         }
       ];
