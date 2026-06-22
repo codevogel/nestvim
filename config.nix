@@ -100,15 +100,15 @@
       ]
       ++ [
         # Pinned from git because it's not in nixpkgs
-        {
-          pname = "swiftpick";
-          src = pkgs.fetchFromGitHub {
-            owner = "codevogel";
-            repo = "swiftpick.nvim";
-            rev = "main";
-            sha256 = "sha256-/L9/VdZ/Rn0ys/YSs6fL3vvqG5OjkZwJeAlC2fgl5Ms=";
-          };
-        }
+        # {
+        #   pname = "swiftpick";
+        #   src = pkgs.fetchFromGitHub {
+        #     owner = "codevogel";
+        #     repo = "swiftpick.nvim";
+        #     rev = "main";
+        #     sha256 = "sha256-/L9/VdZ/Rn0ys/YSs6fL3vvqG5OjkZwJeAlC2fgl5Ms=";
+        #   };
+        # }
       ];
 
     # Lazy plugins by attribute set (some plugins may require renaming)
@@ -123,6 +123,11 @@
     dev.codevogel = {
       pure = ./nvim;
       impure = "/home/$(whoami)/nestvim/nvim";
+    };
+
+    dev.swiftpick = {
+      pure = /home/codevogel/work/neovim/swiftpick.nvim;
+      impure = "/home/$(whoami)/work/neovim/swiftpick.nvim";
     };
   };
 }
