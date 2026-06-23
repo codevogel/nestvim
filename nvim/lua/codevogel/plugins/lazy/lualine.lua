@@ -2,6 +2,7 @@ return {
   {
     "lualine.nvim",
     after = function()
+      require("lz.n").trigger_load("swiftpick")
       require("lualine").setup({
         options = {
           icons_enabled = true,
@@ -24,7 +25,7 @@ return {
         sections = {
           lualine_a = { "mode" },
           lualine_b = { "branch", "diff", "diagnostics" },
-          lualine_c = { "filename" },
+          lualine_c = { "filename", require("swiftpick.lualine").component() },
           lualine_x = { "encoding", "fileformat", "filetype" },
           lualine_y = { "progress" },
           lualine_z = { "location" },
