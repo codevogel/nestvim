@@ -106,7 +106,7 @@
             owner = "codevogel";
             repo = "swiftpick.nvim";
             rev = "main";
-            sha256 = lib.fakeSha256;
+            sha256 = "sha256-D3nDyoKqt22FvpurRqHSZnWbarlj0QIbOwLU5CzTo+0=";
           };
         }
       ];
