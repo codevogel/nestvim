@@ -15,6 +15,11 @@ return {
         cs = { "csharpier" },
         yaml = { "prettierd" },
       },
+      formatters = {
+        gdscript = {
+          prepend_args = { "--line-length=100" },
+        },
+      },
     })
 
     vim.api.nvim_create_autocmd("BufWritePre", {
