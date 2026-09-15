@@ -76,6 +76,7 @@
             };
           }
         ))
+
       ];
 
     # Lazy plugins by list
