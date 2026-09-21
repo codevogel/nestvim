@@ -20,6 +20,7 @@
     ripgrep
     fzf
     nodejs
+    iproute2
 
     # LSP
     nixd
