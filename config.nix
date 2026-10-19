@@ -99,6 +99,7 @@
         lualine-nvim
         copilot-vim
         lazydev-nvim
+        gdscript-extended-lsp-nvim
       ]
       ++ [
         # Pinned from git because it's not in nixpkgs
